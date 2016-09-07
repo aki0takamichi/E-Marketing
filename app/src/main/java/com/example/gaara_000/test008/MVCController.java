@@ -12,7 +12,7 @@ import android.widget.Toast;
  * Created by gaara_000 on 9/6/2016.
  */
 public class MVCController extends Activity /*implements DataSource*/ {
-    MVCView mvcView;
+   // MVCView mvcView;
     MVCModel mvcModel;
 
     private static final int CONTENT_VIEW_ID = 10101010;
@@ -20,7 +20,7 @@ public class MVCController extends Activity /*implements DataSource*/ {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ViewV viewV;
-        mvcView = new MVCView();
+     //   mvcView = new MVCView();
         mvcModel = new MVCModel();
        // mvcView.check(mvcModel);
 
@@ -28,6 +28,17 @@ public class MVCController extends Activity /*implements DataSource*/ {
         setContentView(R.layout.fragment_view_v);
 
     }
+
+    public void show(){
+        Toast.makeText(getBaseContext(),"Dang nhap thanh cong",Toast.LENGTH_SHORT).show();
+
+    }
+    public void showF(){
+
+        Toast.makeText(getBaseContext(),"Dang nhap that bai",Toast.LENGTH_SHORT).show();
+    }
+
+    /*
     public void tinhtoan(String a, String b){
         String aname = mvcModel.name();
         String apass =mvcModel.pass();
@@ -41,8 +52,9 @@ public class MVCController extends Activity /*implements DataSource*/ {
 
             Toast.makeText(getBaseContext(),"Nhap sai",Toast.LENGTH_SHORT).show();
             loginF();
-        }
+        }*/
 
+/*
 
     }
     public boolean login(){
@@ -53,6 +65,7 @@ public class MVCController extends Activity /*implements DataSource*/ {
         return false;
 
     }
+*/
 
 /*    public void tinh(){
 .        if(mvcView.rename().equals(mvcModel.name())==true && mvcView.repass().equals(mvcModel.pass())==true){

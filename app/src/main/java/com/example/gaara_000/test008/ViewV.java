@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 public class ViewV extends Fragment {
     MVCController mvcController;
+    MVCModel mvcModel;
    public ViewV() {
         // Required empty public constructor
     }
@@ -33,7 +34,7 @@ public class ViewV extends Fragment {
         mvcController = new MVCController();
         View view =inflater.inflate(R.layout.fragment_view_v,container,false);
         final EditText edName =(EditText)view.findViewById(R.id.edname);
-        final EditText edPass =(EditText)view.findViewById(R.id.edpass);
+        final EditText edPass =(EditText) view.findViewById(R.id.edpass);
 
         Button btnLogIn =(Button)view.findViewById(R.id.btndangnhap);
         btnLogIn.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +42,7 @@ public class ViewV extends Fragment {
             public void onClick(View v) {
                 String a = edName.getText().toString();
                 String b = edPass.getText().toString();
-                mvcController.tinhtoan(a,b);
+                mvcModel.checkAcc(a,b);
 
             }
         });
